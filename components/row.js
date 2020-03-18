@@ -1,27 +1,15 @@
-
-import Button from '@material-ui/core/Button';
-import Input from '@material-ui/core/Input';
-
-import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-
-
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
 
 const styles = {
   root: {
     display: "flex",
-    flexWrap: "wrap",
+    flexWrap: "wrap"
+  },
+  button: {
+    marginRight: "5px"
   }
 };
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-      width: '25ch',
-    },
-  },
-}));
 
 export default function Row({
   onClickLoading,
@@ -32,12 +20,7 @@ export default function Row({
   setTag,
   loading,
   setLoading
-}) 
-
-
-{
-  const classes = useStyles();
-
+}) {
   const handleChangeTag = event => {
     setTag(event.target.value);
   };
@@ -59,23 +42,34 @@ export default function Row({
 
   return (
     <div style={styles.root}>
-      
       <TextField
-      id="standard-basic" 
-      label="Введите тег" 
+        id="standard-basic"
+        label="Введите тег"
         type="text"
         name="tagName"
         value={tag}
         onChange={handleChangeTag}
       />
-      <Button variant="contained" color="primary" disabled={loading} onClick={handleClick}>
+      <Button
+        style={styles.button}
+        variant="contained"
+        color="primary"
+        disabled={loading}
+        onClick={handleClick}
+      >
         {loading == "" ? "Загрузить" : "Загрузка..."}
       </Button>
-      <Button variant="contained" color="secondary" onClick={handleClickClear}>Очистить</Button>
-      <Button variant="contained" onClick={onClickGroup}>
+      <Button
+        style={styles.button}
+        variant="contained"
+        color="secondary"
+        onClick={handleClickClear}
+      >
+        Очистить
+      </Button>
+      <Button style={styles.button} variant="contained" onClick={onClickGroup}>
         {group ? "Разгруппировать" : "Группировать"}
       </Button>
-      
     </div>
   );
 }

@@ -150,33 +150,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/Button */ "@material-ui/core/Button");
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _material_ui_core_Input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Input */ "@material-ui/core/Input");
-/* harmony import */ var _material_ui_core_Input__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Input__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/TextField */ "@material-ui/core/TextField");
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/TextField */ "@material-ui/core/TextField");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "/Users/tema/gallery/components/row.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
 
 
 const styles = {
   root: {
     display: "flex",
     flexWrap: "wrap"
+  },
+  button: {
+    marginRight: "5px"
   }
 };
-const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__["makeStyles"])(theme => ({
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-      width: '25ch'
-    }
-  }
-}));
 function Row({
   onClickLoading,
   onClickClear,
@@ -187,8 +176,6 @@ function Row({
   loading,
   setLoading
 }) {
-  const classes = useStyles();
-
   const handleChangeTag = event => {
     setTag(event.target.value);
   };
@@ -212,10 +199,10 @@ function Row({
     style: styles.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 44
     },
     __self: this
-  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_2___default.a, {
     id: "standard-basic",
     label: "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0442\u0435\u0433",
     type: "text",
@@ -224,34 +211,37 @@ function Row({
     onChange: handleChangeTag,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 45
     },
     __self: this
   }), __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    style: styles.button,
     variant: "contained",
     color: "primary",
     disabled: loading,
     onClick: handleClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 53
     },
     __self: this
   }, loading == "" ? "Загрузить" : "Загрузка..."), __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    style: styles.button,
     variant: "contained",
     color: "secondary",
     onClick: handleClickClear,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 62
     },
     __self: this
   }, "\u041E\u0447\u0438\u0441\u0442\u0438\u0442\u044C"), __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    style: styles.button,
     variant: "contained",
     onClick: onClickGroup,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 70
     },
     __self: this
   }, group ? "Разгруппировать" : "Группировать"));
@@ -353,7 +343,7 @@ function Index() {
         style: styles.img,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 60
         },
         __self: this
       }, items.map(item => __jsx(_components_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -362,7 +352,7 @@ function Index() {
         setTage: setTag,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 62
         },
         __self: this
       })));
@@ -374,14 +364,14 @@ function Index() {
       key: tag,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 73
+        lineNumber: 72
       },
       __self: this
     }, tag, __jsx("div", {
       style: styles.img,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75
+        lineNumber: 74
       },
       __self: this
     }, items.map(item => {
@@ -392,7 +382,7 @@ function Index() {
           setTage: setTag,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 78
+            lineNumber: 77
           },
           __self: this
         });
@@ -403,7 +393,7 @@ function Index() {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 86
     },
     __self: this
   }, __jsx(_components_row__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -417,7 +407,7 @@ function Index() {
     setLoading: setLoading,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 87
     },
     __self: this
   }), group ? renderCardsGroup() : renderCards());
@@ -448,17 +438,6 @@ module.exports = require("@material-ui/core/Button");
 
 /***/ }),
 
-/***/ "@material-ui/core/Input":
-/*!******************************************!*\
-  !*** external "@material-ui/core/Input" ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/core/Input");
-
-/***/ }),
-
 /***/ "@material-ui/core/TextField":
 /*!**********************************************!*\
   !*** external "@material-ui/core/TextField" ***!
@@ -467,17 +446,6 @@ module.exports = require("@material-ui/core/Input");
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/core/TextField");
-
-/***/ }),
-
-/***/ "@material-ui/core/styles":
-/*!*******************************************!*\
-  !*** external "@material-ui/core/styles" ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/core/styles");
 
 /***/ }),
 

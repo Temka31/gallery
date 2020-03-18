@@ -2,7 +2,6 @@ import Row from "../components/row";
 import Card from "../components/card";
 import { useState } from "react";
 
-
 const styles = {
   img: {
     display: "flex",
